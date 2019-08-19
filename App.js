@@ -1,9 +1,9 @@
-import React from 'react';
-import { StatusBar } from 'react-native';
-import { DrawerNavigator, DrawerItems } from 'react-navigation';
-import HomeStackNavigator from 'components/navigation/home-stack-navigator';
-import { COLORS } from 'constants/styles';
-import styled from 'styled-components/native';
+import React from "react";
+import { StatusBar } from "react-native";
+import { DrawerNavigator, DrawerItems } from "react-navigation";
+import HomeStackNavigator from "./src/components/navigation/home-stack-navigator";
+import { COLORS } from "constants/styles";
+import styled from "styled-components/native";
 
 const DrawerContainer = styled.View`
   flex: 1;
@@ -17,8 +17,8 @@ const AppContainer = styled.View`
 
 const drawerRouteConfig = {
   Home: {
-    screen: HomeStackNavigator,
-  },
+    screen: HomeStackNavigator
+  }
 };
 
 const CustomDrawerContentComponent = props => (
@@ -28,7 +28,7 @@ const CustomDrawerContentComponent = props => (
 );
 
 const drawerNavigatorConfig = {
-  contentComponent: props => <CustomDrawerContentComponent {...props} />,
+  contentComponent: props => <CustomDrawerContentComponent {...props} />
 };
 
 const AppDrawer = DrawerNavigator(drawerRouteConfig, drawerNavigatorConfig);
