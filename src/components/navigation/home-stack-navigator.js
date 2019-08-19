@@ -6,12 +6,12 @@ import ShowDetailsScreen from 'components/screens/show-details-screen';
 const HomeStackNavigator = StackNavigator(
   {
     Main: { screen: HomeScreen },
-    ShowDetails: { screen: ShowDetailsScreen },
+    ShowDetails: { screen: ShowDetailsScreen }
   },
   {
     initialRouteName: 'Main',
-    headerMode: 'none',
-  },
+    headerMode: 'none'
+  }
 );
 
 export default HomeStackNavigator;
